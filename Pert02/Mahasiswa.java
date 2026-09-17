@@ -32,10 +32,14 @@ public class Mahasiswa {
         // TODO 2: tolak NIM yang kosong atau null.
         //         Lemparkan IllegalArgumentException dengan pesan yang menyebut
         //         APA yang salah — bukan sekadar "Error".
-
+        if (nim == null || nim.trim().isEmpty()) {
+            throw new IllegalArgumentException("NIM tidak boleh kosong.");
+        }
         // TODO 3: tolak setiap komponen nilai yang di luar rentang 0-100.
         //         Petunjuk: buat satu method privat pembantu agar tidak menulis
         //         pemeriksaan yang sama tiga kali.
+        
+
 
         this.nim = nim;
         this.nama = nama;
@@ -47,7 +51,9 @@ public class Mahasiswa {
     // TODO 4: buat method privat pembantu untuk memvalidasi satu komponen nilai.
     //         Tanda tangan yang disarankan:
     //         private static void pastikanNilaiSah(String namaKomponen, double nilai)
-
+    private static void pastikanNilaiSah(String namaKomponen, double nilai){
+        
+    }
 
     /**
      * TODO 5: hitung nilai akhir memakai konstanta bobot di atas.
